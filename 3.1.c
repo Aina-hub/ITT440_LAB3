@@ -25,5 +25,5 @@ return 0;
 }
 
 void sigint_handler(int sig){
-printf("Jangan Kacau Saya!\n");
+printf("This is special signal handler for sigint!\n");
 }
