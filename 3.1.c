@@ -6,10 +6,10 @@
 int main(void)
 {
 
-void sigtstp_handler(int sig);
+void sigquit_handler(int sig);
 char s[200];
 
-if(signal(SIGTSTP,sigtstp_handler)==SIG_ERR){
+if(signal(SIGQUIT,sigquit_handler)==SIG_ERR){
 perror("signal");
 exit(1);
 }
@@ -24,6 +24,6 @@ printf("You entered:%s\n",s);
 return 0;
 }
 
-void sigtstp_handler(int sig){
-printf("This is special signal handler for sigtstp!\n");
+void sigquit_handler(int sig){
+printf("This is special signal handler for sigquit!\n");
 }
